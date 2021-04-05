@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <h1><span class="exp">Expense</span>Tracker</h1>
+   <span class="heading">Income</br> </span>
+    <input class="inp-1" type="number" id="income">
+    <button onclick="addIncome()">Add Income</button>
+
+    <h4 id="currentIncome"></h4>
+
+    <div id="expenseForm " >
+        <label>
+            <span class="heading">Expenses</br> </span>
+
+            <input  type="number" id="expense" />
+        <button onclick="addExpense()">Add Expense</button>
+
+        </label> <br />
+        <label>
+            <span class="heading">category</br> </span>
+
+            <select id="category" class="select">
+                <option value="food">Food</option>
+                <option value="bike">Bike</option>
+                <option value="rent">Rent</option>
+            </select>
+        </label>
+        <br>
+        <label>
+            <span class="heading">Show Expenses</br> </span>
+            <select id="showExpense" onchange="showFilterExpense()" class="select">
+                <option value="all">All</option>
+                <option value="food">Food</option>
+                <option value="bike">Bike</option>
+                <option value="rent">Rent</option>
+            </select>
+        </label>
+
+    </div>
+    <h5 class="head-5">Expenses</h5>
+    <ul id="expenses">
+      
+    </ul>
+     <button onclick="showtransaction()" class="addbutton">Transaction</button>
+     <ul id="transact">
+
+     </ul>
+     <label>
+        <span class="heading">Transaction</br> </span>
+
+        <select id="transDatas" onchange="showFilterExpenses()" class="select">
+            <option value="All">All</option>
+            <option value="Savings">Savings</option>
+            <option value="Expenses">Expenses</option>
+        </select>
+    </label>
+
+    <h5 class="head-5">Selected Transaction</h5>
+    <ul id="expData">
+      
+    </ul>
+   
+    <script src="app.js"></script>
+</body>
+
+</html>
